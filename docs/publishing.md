@@ -20,7 +20,7 @@ The application also asks for organization name and handle, contact email, descr
 
 ## Before submission
 
-1. Complete the package checks and authenticated Grok Bot acceptance in [testing.md](testing.md).
+1. Complete the package checks and authenticated Grok Bot connection/read/write smoke test in [testing.md](testing.md). Record any remaining acceptance checks explicitly for release follow-up.
 2. Review the package, documentation, branding, and MIT licensing choice for public release.
 3. Make the repository publicly accessible, as required by the marketplace, and verify the public URLs resolve.
 4. Submit the repository URL through https://cursor.com/marketplace/publish and confirm the intended Grok Bot distribution.

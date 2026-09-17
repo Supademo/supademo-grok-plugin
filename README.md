@@ -6,7 +6,7 @@ Connect an AI assistant to your Supademo account to find, personalize, edit, and
 
 This package connects to Supademo's hosted MCP server at `https://mcp.supademo.com/mcp`. Supademo handles authentication, permissions, and tool execution. The package has no local executable, installation script, or API key to configure.
 
-**Status:** Development preview targeting Grok Bot through the Agent Plugins format. A Grok Bot marketplace listing and authenticated end-to-end compatibility have not yet been verified. See [validation and release checks](docs/testing.md).
+**Status:** Development preview targeting Grok Bot through the Agent Plugins format. OAuth, tool discovery, demo reads, and test-link creation/readback passed in Grok Bot using a custom MCP connection on 2026-09-16. Marketplace listing and installation of this package remain pending. See [validation and release checks](docs/testing.md).
 
 ## What you can do
 
@@ -54,7 +54,7 @@ Supademo checks access for each operation. Workspace content operations require 
 
 You can revoke access from Supademo's Connected apps settings. Access tokens currently expire after 90 days, so a client may require authentication again. The plugin does not implement its own token storage or refresh flow.
 
-Data returned by Supademo tools is processed by the AI client you connect. Review that client's data settings and [Supademo's privacy policy](https://supademo.com/privacy-policy). Grok Bot plugins are available across bots on the connected account; separate bot profiles are not separate workspace authorization boundaries.
+Data returned by Supademo tools is processed by the AI client you connect. Review that client's data settings, [Supademo's privacy policy](https://supademo.com/privacy-policy), and [Supademo's terms of service](https://supademo.com/terms). Grok Bot plugins are available across bots on the connected account; separate bot profiles are not separate workspace authorization boundaries.
 
 ## Package
 

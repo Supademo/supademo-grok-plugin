@@ -57,7 +57,8 @@ Record the Grok Bot version, date, test workspace, result, and any redacted erro
 | List workspaces | Returns workspaces allowed by the connected account. |
 | Read test demo | Returns the selected synthetic demo without changing it. |
 | Create test link | Creates exactly one trackable link with the requested variables, where entitled. |
-| Inspect result | The returned link opens and its variables match supported demo content. |
+| Inspect stored result | A separate demo read returns the created link and exact requested variable values. |
+| Viewer rendering | In a disposable test environment, the returned link opens and its variables match supported demo content. Opening a viewer can record engagement and trigger configured notifications. |
 | Reconnect/revoke | Revoking the connection prevents further authenticated use; reconnecting works. |
 | Workspace access | Operations reject a workspace the test account cannot access. |
 | Product gates | Missing entitlements produce an actionable error rather than bypassing the gate. |
@@ -70,7 +71,9 @@ Use a disposable account for revocation testing so existing production connectio
 - Package schema validation: passed against both canonical Agent Plugins 1.0.0 schemas on 2026-09-16. Relative documentation links and the static SVG asset also passed inspection.
 - Public discovery: both metadata endpoints returned HTTP 200 on 2026-09-16. The resource, OAuth endpoints, S256 PKCE, and public-client registration metadata match the configuration. An unauthenticated MCP initialize request returned HTTP 401 with the expected Bearer resource-metadata challenge.
 - Cursor IDE authenticated workflow: pending.
-- Grok Bot custom connection: registered through the Bot conversation and visible under Installed. Authenticate opens the expected Supademo consent screen; final authorization and authenticated tool execution are pending.
+- Grok Bot custom connection: passed on 2026-09-16 in desktop version 0.44.0. Browser OAuth completed successfully and connector settings showed Connected with 123 tools enabled. This is an observed tool count, not a fixed package guarantee.
+- Grok Bot authenticated smoke test: passed through the custom connection. `list_workspaces` and `list_demos` returned accessible workspaces and an explicitly named three-step test demo. `get_demo` confirmed its steps and no existing links. `manage_links` created one trackable link with synthetic name, email, and company values. A separate `get_demo` call with `include: ["links"]` and `includeLinkVariables: true` returned the link with the exact stored values. The test link was retained; no demo content or visibility was changed.
+- Viewer rendering, reconnect/revocation, unauthorized-workspace rejection, missing-entitlement behavior, and repeated-write handling: not exercised in this smoke test. The viewer was not opened, and customer analytics and outreach were not tested.
 - Grok Bot marketplace package installation: pending listing approval and customer installation testing.
 - Public marketplace listing: pending.
 
