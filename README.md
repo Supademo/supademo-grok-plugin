@@ -34,7 +34,7 @@ The public connection details are:
 | Authentication | OAuth 2.0 authorization code with PKCE |
 | Setup guide | [Supademo MCP documentation](https://docs.supademo.com/customize/mcp-server) |
 
-During development, use a client's documented custom remote MCP or development-plugin flow. Grok Bot's published help describes installing marketplace plugins; this repository does not yet have a verified Grok Bot installation link. Cursor IDE can load this standard package locally for a separate compatibility check; see [testing](docs/testing.md).
+During development, ask a Grok Bot to connect the endpoint as a custom remote MCP server, then open **Marketplace → Your plugins → Authenticate**. This tests the hosted connection; this repository does not yet have a verified Grok Bot marketplace installation link. Cursor IDE can load this standard package locally for a separate compatibility check; see [testing](docs/testing.md).
 
 Once a Grok Bot marketplace listing is approved and its installation is verified, customers will be able to add the plugin and complete Supademo authentication from the client. See [release preparation](docs/publishing.md) for the remaining steps.
 

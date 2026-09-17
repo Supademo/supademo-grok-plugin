@@ -14,7 +14,9 @@ The package targets Grok Bot using the portable Agent Plugins format. The docume
 | Support | support@supademo.com |
 | Logo | `assets/logo.svg` |
 
-The core Agent Plugins manifest does not allow a top-level `logo` field. The logo is included as a repository asset; confirm the supported listing metadata for this asset during submission. Avoid adding undocumented fields or legacy Grok Build manifests to fix a Grok Bot installation issue.
+The core Agent Plugins manifest does not allow a top-level `logo` field. The live publisher application has a **Logotype URL** field requesting a square SVG or PNG with a background plate. The public Supademo icon is available at `https://cdn.supademo.com/supademo_logo_icon.svg` and matches `assets/logo.svg`. Avoid adding undocumented fields or legacy Grok Build manifests to fix a Grok Bot installation issue.
+
+The application also asks for organization name and handle, contact email, description, public GitHub repository, owner, and website. Submitting accepts the linked Publisher Terms; review and approve those terms before submitting.
 
 ## Before submission
 

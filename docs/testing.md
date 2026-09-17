@@ -38,7 +38,15 @@ This checks the package in Cursor IDE only. It does not establish Grok Bot compa
 
 ## Grok Bot acceptance
 
-Use a test Supademo account/workspace with synthetic demo and lead data. Use the current Grok Bot custom-connection or development-plugin UI if available; otherwise arrange a private test listing with the marketplace team. The published marketplace installation instructions do not establish a local-folder installation method for Grok Bot.
+Use a test Supademo account/workspace with synthetic demo and lead data. The custom remote MCP setup observed in the Grok Bot desktop app is:
+
+1. Open a test Bot and ask it to connect `https://mcp.supademo.com/mcp` as a custom remote MCP server using OAuth.
+2. Open **Marketplace → Your plugins**. The custom `supademo` connector appears under Installed.
+3. Click **Authenticate**. The browser opens Supademo's authorization screen. The OAuth client may be displayed as **Cursor**.
+4. Review the requested permissions and authorize the connection from the account intended for testing.
+5. Return to Grok Bot and verify the authenticated tools using the checks below.
+
+The in-chat Add card may open a marketplace search with no public result; use **Your plugins** to find the custom connector. This checks the hosted MCP connection. It does not test installation of this repository as a marketplace package; that remains a separate acceptance step after listing approval. The published instructions do not establish a local-folder installation method for Grok Bot.
 
 Record the Grok Bot version, date, test workspace, result, and any redacted error for each check. Keep account IDs and private evidence outside this public package.
 
@@ -62,7 +70,8 @@ Use a disposable account for revocation testing so existing production connectio
 - Package schema validation: passed against both canonical Agent Plugins 1.0.0 schemas on 2026-09-16. Relative documentation links and the static SVG asset also passed inspection.
 - Public discovery: both metadata endpoints returned HTTP 200 on 2026-09-16. The resource, OAuth endpoints, S256 PKCE, and public-client registration metadata match the configuration. An unauthenticated MCP initialize request returned HTTP 401 with the expected Bearer resource-metadata challenge.
 - Cursor IDE authenticated workflow: pending.
-- Grok Bot authenticated workflow: pending; the local app is at first-run onboarding, before connection setup.
+- Grok Bot custom connection: registered through the Bot conversation and visible under Installed. Authenticate opens the expected Supademo consent screen; final authorization and authenticated tool execution are pending.
+- Grok Bot marketplace package installation: pending listing approval and customer installation testing.
 - Public marketplace listing: pending.
 
 Update these statuses only from observed results. A public source repository is not a marketplace listing.
