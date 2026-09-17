@@ -2,6 +2,10 @@
 
 The package targets Grok Bot using the portable Agent Plugins format. The documented submission route reviewed is the Cursor marketplace, where Quo also has a listing. Confirm that an accepted submission will be available in Grok Bot; Cursor IDE availability alone is not that confirmation.
 
+## Submission status
+
+The publisher application was submitted through [Cursor marketplace publishing](https://cursor.com/marketplace/publish) on 2026-09-16. The confirmation page displayed “Thanks for applying” and acknowledged receipt for review. Approval and a public listing URL are pending. Grok Bot marketplace installation has not yet been verified.
+
 ## Listing draft
 
 | Field | Draft |

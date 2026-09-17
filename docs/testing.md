@@ -75,6 +75,6 @@ Use a disposable account for revocation testing so existing production connectio
 - Grok Bot authenticated smoke test: passed through the custom connection. `list_workspaces` and `list_demos` returned accessible workspaces and an explicitly named three-step test demo. `get_demo` confirmed its steps and no existing links. `manage_links` created one trackable link with synthetic name, email, and company values. A separate `get_demo` call with `include: ["links"]` and `includeLinkVariables: true` returned the link with the exact stored values. The test link was retained; no demo content or visibility was changed.
 - Viewer rendering, reconnect/revocation, unauthorized-workspace rejection, missing-entitlement behavior, and repeated-write handling: not exercised in this smoke test. The viewer was not opened, and customer analytics and outreach were not tested.
 - Grok Bot marketplace package installation: pending listing approval and customer installation testing.
-- Public marketplace listing: pending.
+- Public marketplace listing: publisher application submitted on 2026-09-16 through the Cursor marketplace. The confirmation page acknowledged receipt and said the plugin would be reviewed. Approval, a public listing URL, and Grok Bot marketplace installation remain pending.
 
 Update these statuses only from observed results. A public source repository is not a marketplace listing.
