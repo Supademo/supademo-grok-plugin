@@ -1,0 +1,22 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "supademo",
+  "version": "0.1.0",
+  "description": "Find, personalize, and analyze interactive product demos with Supademo. Connect your account to work with demos, trackable links, and Demo Agent conversations.",
+  "author": {
+    "name": "Supademo",
+    "email": "support@supademo.com",
+    "url": "https://supademo.com"
+  },
+  "repository": "https://github.com/Supademo/supademo-grok-plugin",
+  "homepage": "https://docs.supademo.com/customize/mcp-server",
+  "license": "MIT",
+  "keywords": [
+    "supademo",
+    "interactive-demos",
+    "sales-enablement",
+    "product-demos",
+    "personalization",
+    "analytics"
+  ]
+}
